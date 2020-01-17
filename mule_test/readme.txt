@@ -1,0 +1,1 @@
+This is Mule EE Runtime for testing apps.
