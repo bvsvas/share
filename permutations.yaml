@@ -1,16 +1,43 @@
- vendors:
-  - eclipse-temurin
-  - openjdk
-  - amazoncorretto
+```yaml
+defaults:
+  vendors:
+    - eclipse-temurin
+    - openjdk
+    - amazoncorretto
   java:
-  - java_greater_than: '17'
-    tomcat_versions:
-    - 11.0.9
-    - 10.1.43
+    - java_greater_than: '25'
+      tomcat_versions:
+        - 11.0.9
+    # Note: Java 25+ is not yet supported by Tomcat versions beyond 11.0.x, as of current knowledge.
+
 permutations:
-- java_version: '17'
-  vendor: eclipse-temurin
-  platform: linux/amd64
-  tomcat_versions:
-  - 10.1.10
-  - 10.1.43
+  - java_version: '25'
+    vendor: eclipse-temurin
+    platform: linux/amd64
+    tomcat_versions:
+      - 11.0.9
+    unsupported_tomcat_versions:
+      - 8.5.86
+      - 9.0.85
+      - 10.1.43
+
+  - java_version: '25'
+    vendor: openjdk
+    platform: linux/amd64
+    tomcat_versions:
+      - 11.0.9
+    unsupported_tomcat_versions:
+      - 8.5.86
+      - 9.0.85
+      - 10.1.43
+
+  - java_version: '25'
+    vendor: amazoncorretto
+    platform: linux/amd64
+    tomcat_versions:
+      - 11.0.9
+    unsupported_tomcat_versions:
+      - 8.5.86
+      - 9.0.85
+      - 10.1.43
+```
