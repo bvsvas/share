@@ -1,1 +1,16 @@
-Test
+ vendors:
+  - eclipse-temurin
+  - openjdk
+  - amazoncorretto
+  java:
+  - java_greater_than: '17'
+    tomcat_versions:
+    - 11.0.9
+    - 10.1.43
+permutations:
+- java_version: '17'
+  vendor: eclipse-temurin
+  platform: linux/amd64
+  tomcat_versions:
+  - 10.1.10
+  - 10.1.43
