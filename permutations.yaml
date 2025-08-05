@@ -1,28 +1,3 @@
-<think>
-Okay, the user is asking to generate permutations YAML for Java 30 across all JVM vendors. Let me start by understanding the problem.
+The requested Java version **30** is not a valid or supported release according to the provided data. The most recent feature version listed in your input is **25**, with **26** being the tip version. Java 30 does not exist in the provided `available_releases` or `available_lts_releases`, and therefore, it is **unsupported**.
 
-First, I need to check if Java 30 is a valid release. Looking at the provided data: available_releases go up to 24, and the most recent feature version is 25. The tip version is 26. So Java 30 isn't listed here. That means it's not a supported release according to the given data.
-
-The user wants permutations for Java 30, but since it's not in available_releases or any of the listed versions (up to 24, with tip at 26), I should throw an error. However, the user might be assuming that Java 30 exists in their environment. But according to the provided data, it's not available.
-
-Next, I need to consider the vendors: eclipse-temurin, openjdk, amazoncorretto. For each of these, I have to check if Java 30 is supported. But since the available_releases don't include 30, I can't proceed.
-
-The output requires a YAML structure with defaults and permutations. However, since Java 30 isn't available, the permutations section would be empty or need to indicate that it's unsupported. But according to the user's instruction, if a version doesn't exist, throw an error.
-
-Wait, the original problem statement says: "if given version doesn't exist, throw unsupported, not available java release error." So in this case, Java 30 is not in the available_releases (which go up to 24) or even the tip version (26). Therefore, it's an invalid request.
-
-So the correct response is to indicate that Java 30 is not a supported or available release based on the provided data. Hence, no permutations can be generated for it.
-
-But the user might have made a typo or is referring to a future version. However, according to the given data, Java 30 isn't present. Therefore, I need to inform them that it's not available and can't generate the YAML.
-</think>
-
-```yaml
-defaults:
-  vendors:
-    - eclipse-temurin
-    - openjdk
-    - amazoncorretto
-
-permutations:
-  - error: "Java version '30' is not a supported or available release according to the provided data. Available releases include up to Java 24 (feature) and Java 21 (LTS)."
-```
+As a result, I cannot generate permutations for Java 30. Please provide a valid and supported Java version (e.g., from `available_releases` or `available_lts_releases`) for generating the compatibility matrix.
