@@ -1,1 +1,156 @@
-test me
+```yaml
+defaults:
+  vendors:
+    - eclipse-temurin
+    - openjdk
+    - amazoncorretto
+  general_compatibility: |
+    Apache Tomcat versions are designed to work with specific minimum Java versions.
+    Newer Tomcat versions generally require newer Java versions, aligning with Jakarta EE specifications.
+    Older Tomcat versions have reached End-Of-Life (EOL) and are not recommended for new deployments or production use,
+    even if technically compatible with certain Java versions. Users are strongly encouraged to upgrade to the latest
+    supported Tomcat and Java versions.
+
+permutations:
+  - java_version: '8'
+    vendor: eclipse-temurin
+    platform: linux/amd64
+    tomcat_versions:
+      - 9.0.107
+    unsupported_tomcat_versions:
+      - 11.0.9
+      - 10.1.43
+      - 10.0.27
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+  - java_version: '8'
+    vendor: openjdk
+    platform: linux/amd64
+    tomcat_versions:
+      - 9.0.107
+    unsupported_tomcat_versions:
+      - 11.0.9
+      - 10.1.43
+      - 10.0.27
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+  - java_version: '8'
+    vendor: amazoncorretto
+    platform: linux/amd64
+    tomcat_versions:
+      - 9.0.107
+    unsupported_tomcat_versions:
+      - 11.0.9
+      - 10.1.43
+      - 10.0.27
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+  - java_version: '11'
+    vendor: eclipse-temurin
+    platform: linux/amd64
+    tomcat_versions:
+      - 9.0.107
+      - 10.1.43
+    unsupported_tomcat_versions:
+      - 11.0.9
+      - 10.0.27
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+  - java_version: '11'
+    vendor: openjdk
+    platform: linux/amd64
+    tomcat_versions:
+      - 9.0.107
+      - 10.1.43
+    unsupported_tomcat_versions:
+      - 11.0.9
+      - 10.0.27
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+  - java_version: '11'
+    vendor: amazoncorretto
+    platform: linux/amd64
+    tomcat_versions:
+      - 9.0.107
+      - 10.1.43
+    unsupported_tomcat_versions:
+      - 11.0.9
+      - 10.0.27
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+  - java_version: '17'
+    vendor: eclipse-temurin
+    platform: linux/amd64
+    tomcat_versions:
+      - 10.1.43
+      - 11.0.9
+    unsupported_tomcat_versions:
+      - 10.0.27
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+  - java_version: '17'
+    vendor: openjdk
+    platform: linux/amd64
+    tomcat_versions:
+      - 10.1.43
+      - 11.0.9
+    unsupported_tomcat_versions:
+      - 10.0.27
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+  - java_version: '17'
+    vendor: amazoncorretto
+    platform: linux/amd64
+    tomcat_versions:
+      - 10.1.43
+      - 11.0.9
+    unsupported_tomcat_versions:
+      - 10.0.27
+      - 8.5.10‍
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+```
