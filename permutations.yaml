@@ -1,3 +1,56 @@
-The requested Java version **30** is not a valid or supported release according to the provided data. The most recent feature version listed in your input is **25**, with **26** being the tip version. Java 30 does not exist in the provided `available_releases` or `available_lts_releases`, and therefore, it is **unsupported**.
+defaults:
+  vendors:
+    - eclipse-temurin
+    - openjdk
+    - amazoncorretto
+  general_compatibility: "Tomcat versions are generally compatible with Java versions as specified in their documentation. It's crucial to refer to the official Tomcat documentation for the most accurate and up-to-date compatibility information."
 
-As a result, I cannot generate permutations for Java 30. Please provide a valid and supported Java version (e.g., from `available_releases` or `available_lts_releases`) for generating the compatibility matrix.
+permutations:
+  - java_version: '24'
+    vendor: eclipse-temurin
+    platform: linux/amd64
+    tomcat_versions:
+      - 11.0.9
+    unsupported_tomcat_versions:
+      - 10.1.43
+      - 10.0.27
+      - 9.0.107
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+  - java_version: '24'
+    vendor: openjdk
+    platform: linux/amd64
+    tomcat_versions:
+      - 11.0.9
+    unsupported_tomcat_versions:
+      - 10.1.43
+      - 10.0.27
+      - 9.0.107
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
+  - java_version: '24'
+    vendor: amazoncorretto
+    platform: linux/amd64
+    tomcat_versions:
+      - 11.0.9
+    unsupported_tomcat_versions:
+      - 10.1.43
+      - 10.0.27
+      - 9.0.107
+      - 8.5.100
+      - 8.0.53
+      - 7.0.109
+      - 6.0.53
+      - 5.5.36
+      - 4.1.40
+      - 3.3.2
